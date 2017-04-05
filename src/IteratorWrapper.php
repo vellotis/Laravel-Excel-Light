@@ -7,7 +7,7 @@ use Iterator;
 class IteratorWrapper implements Iterator
 {
   
-    public function __construct(IteratorAggregate $iterator, $classBuilderCallback)
+    public function __construct(Iterator $iterator, $classBuilderCallback)
     {
         $this->iterator = $iterator;
         $this->classBuilderCallback = $classBuilderCallback;
