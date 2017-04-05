@@ -71,7 +71,7 @@ class Reader implements IteratorAggregate
     {
         $sheetIterator = $this->sheet->getSheetIterator();
         return new IteratorWrapper($sheetIterator, function ($sheet) {
-            new Sheet($sheet)
+            return new Sheet($sheet);
         });
     }
 
