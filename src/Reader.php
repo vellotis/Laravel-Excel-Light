@@ -66,12 +66,7 @@ class Reader implements IteratorAggregate
      * @return Traversable An instance of an object implementing <b>Iterator</b> or
      *                     <b>Traversable</b>
      * @since 5.0.0
-     */
-    public function getIterator()
-    {
-        return $this->sheets();
-    }
-    
+     */    
     public function getIterator()
     {
         $sheetIterator = $this->sheet->getSheetIterator();
