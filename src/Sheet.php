@@ -92,10 +92,10 @@ class Sheet implements IteratorAggregate
         $rowIterator = $this->sheet->getRowIterator();
 
         if ($rowIterator->valid()) {
-          $rawRow = $rows->current();
+          $rawRow = $rowIterator->current();
           if ($this->isFirstRowAsHeading()) {
             $headings = $rawRow;
-            $rows->next();
+            $rowIterator->next();
           } else {
             $headings = array_keys($rawRow);
           }
