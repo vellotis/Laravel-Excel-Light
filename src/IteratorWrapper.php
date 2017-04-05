@@ -18,7 +18,7 @@ class IteratorWrapper implements Iterator
   
     public function current()
     {
-        return $this->classBuilderCallback($this->iterator->current());
+        return call_user_func($this->classBuilderCallback, $this->iterator->current());
     }
 
     public function key()
